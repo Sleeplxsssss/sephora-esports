@@ -1,115 +1,110 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Sephora E-Sports | Discord and TikTok Integration</title>
-    <meta name="description" content="Sephora E-Sports is a Rocket League E-Sports community. This site explains the Discord and TikTok integration used by the community.">
-    <link rel="stylesheet" href="assets/styles.css">
-  </head>
-  <body>
-    <header class="site-header">
-      <a class="brand" href="./" aria-label="Sephora E-Sports home">
-        <span class="brand-mark" aria-hidden="true">SE</span>
-        <span>
-          <strong>Sephora E-Sports</strong>
-          <small>Rocket League Community</small>
-        </span>
-      </a>
-      <nav class="site-nav" aria-label="Main navigation">
-        <a aria-current="page" href="./">Home</a>
-        <a href="privacy/">Privacy Policy</a>
-        <a href="terms/">Terms of Service</a>
-      </nav>
-    </header>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sephora E-Sports · Rocket League</title>
+<meta name="description" content="Sephora E-Sports – Rocket League Community. Offene Scrims, Team, Discord und TikTok.">
+<meta property="og:title" content="Sephora E-Sports">
+<meta property="og:description" content="Rocket League Community · Scrims · Discord">
+<meta property="og:image" content="assets/og.jpg">
+<meta name="theme-color" content="#07070a">
+<link rel="icon" href="assets/logo.png">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<div class="grid-bg"></div><div class="glow"></div>
 
-    <main>
-      <section class="hero">
-        <div class="hero-copy">
-          <p class="eyebrow">Discord / TikTok Integration</p>
-          <h1>Sephora E-Sports</h1>
-          <p class="lead">
-            A Rocket League E-Sports community using a focused TikTok integration
-            to notify its official Discord server when new public TikTok videos
-            are available from the authorized Sephora E-Sports account.
-          </p>
-          <div class="action-row" aria-label="Important pages">
-            <a class="button primary" href="privacy/">Privacy Policy</a>
-            <a class="button secondary" href="terms/">Terms of Service</a>
-          </div>
-        </div>
-        <div class="arena-visual" aria-hidden="true">
-          <div class="arena-frame">
-            <div class="pitch">
-              <span class="center-line"></span>
-              <span class="goal goal-left"></span>
-              <span class="goal goal-right"></span>
-              <span class="ball"></span>
-              <span class="car car-cyan"></span>
-              <span class="car car-red"></span>
-            </div>
-          </div>
-        </div>
-      </section>
+<header class="nav"><div class="wrap">
+  <a class="brand" href="./"><img src="assets/logo.png" alt="">Sephora</a>
+  <nav class="links"><a href="#scrims">Scrims</a><a href="#anmelden">Anmelden</a><a href="#team">Team</a><a href="#tiktok">TikTok</a></nav>
+  <a class="btn pri" data-invite href="#join">Discord beitreten</a>
+</div></header>
 
-      <section class="content-band">
-        <div class="section-heading">
-          <p class="eyebrow">What the integration does</p>
-          <h2>Simple notifications for public TikTok videos</h2>
-        </div>
-        <div class="feature-grid">
-          <article class="feature-card">
-            <h3>Community purpose</h3>
-            <p>
-              Sephora E-Sports is a Rocket League E-Sports community with an
-              official Discord server and a TikTok presence.
-            </p>
-          </article>
-          <article class="feature-card">
-            <h3>Authorized access only</h3>
-            <p>
-              TikTok access is used only after explicit OAuth authorization by
-              the Sephora E-Sports TikTok account.
-            </p>
-          </article>
-          <article class="feature-card">
-            <h3>Public video detection</h3>
-            <p>
-              The integration checks for new public TikTok videos from the
-              authorized account and posts a notice in the official Discord
-              server.
-            </p>
-          </article>
-          <article class="feature-card">
-            <h3>No video publishing</h3>
-            <p>
-              The application does not publish TikTok videos, upload content, or
-              post to TikTok on behalf of the account.
-            </p>
-          </article>
-        </div>
-      </section>
+<main>
+<div class="wrap hero">
+  <img class="logo rv" src="assets/logo.png" alt="Sephora Logo">
+  <span class="eyebrow rv"><i class="dot"></i><span id="live">Rocket League Community</span></span>
+  <h1 class="rv">Sephora<br><span>E-Sports</span></h1>
+  <p class="lead rv">Scrims, Teams und eine Community, die zusammen besser wird. Alles live aus unserem Discord.</p>
+  <div class="cta rv"><a class="btn pri" data-invite href="#join">Jetzt beitreten →</a><a class="btn" href="#scrims">Offene Scrims</a></div>
+  <div class="stats rv">
+    <div class="stat"><b data-n="members">–</b><small>Mitglieder</small></div>
+    <div class="stat"><b data-n="online">–</b><small>gerade online</small></div>
+    <div class="stat"><b data-n="scrims">–</b><small>offene Scrims</small></div>
+    <div class="stat"><b data-n="boosts">–</b><small>Server-Boosts</small></div>
+  </div>
+</div>
 
-      <section class="notice-band">
-        <div>
-          <p class="eyebrow">Data and platform notes</p>
-          <h2>No tracking on this website</h2>
-        </div>
-        <p>
-          This static website uses no analytics, no advertising trackers, and no
-          cookies unless a future hosting platform requires strictly technical
-          cookies outside this website's control.
-        </p>
-      </section>
-    </main>
+<section id="scrims"><div class="wrap">
+  <div class="head rv"><div><span class="kicker">Live aus Discord</span><h2>Offene Scrims</h2></div>
+    <p>Mitglieder erstellen Scrims direkt im Discord per Button. Hier siehst du alle offenen Termine.</p></div>
+  <div class="scrims" id="scrimList"><div class="empty">Scrims werden geladen …</div></div>
+</div></section>
 
-    <footer class="site-footer">
-      <p>Sephora E-Sports Discord / TikTok Integration</p>
-      <nav aria-label="Footer navigation">
-        <a href="./">Home</a>
-        <a href="privacy/">Privacy Policy</a>
-        <a href="terms/">Terms of Service</a>
-      </nav>
-    </footer>
-  </body>
+<section id="anmelden"><div class="wrap split">
+  <div class="rv">
+    <span class="kicker">Scrims erstellen &amp; anfragen</span>
+    <div class="head" style="margin-bottom:0"><h2>Spiel gegen uns.</h2></div>
+    <p style="color:var(--mut);margin-top:18px">Erstellt einen neuen Scrim gegen Sephora oder meldet euch für einen offenen Termin an. Das geht hier oder direkt auf unserem Discord über die Buttons im Scrim-Kanal.</p>
+    <ol class="steps">
+      <li><span><b>Anfrage senden</b><br>Teamname, Modus, Rang und Wunschtermin.</span></li>
+      <li><span><b>Freigabe</b><br>Unser Team bestätigt im Discord, meist innerhalb von 24 Stunden.</span></li>
+      <li><span><b>Live überall</b><br>Der Scrim steht auf dem Server und auf dieser Seite, mit euch als Gegner.</span></li>
+    </ol>
+  </div>
+  <form class="form rv" id="signup" novalidate>
+    <div class="seg" role="tablist">
+      <button type="button" class="on" data-type="create">➕ Scrim erstellen</button>
+      <button type="button" data-type="join">🤝 Bei Scrim anmelden</button>
+    </div>
+    <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off">
+    <div class="f2">
+      <div class="fi"><label for="team">Teamname</label><input id="team" name="team" required maxlength="40"></div>
+      <div class="fi"><label for="dc">Discord-Name</label><input id="dc" name="discord" required maxlength="40"></div>
+    </div>
+    <div class="only-join fi" hidden><label for="scrimid">Offener Scrim</label><select id="scrimid" name="scrim"><option value="">Keine offenen Scrims</option></select></div>
+    <div class="only-create fi"><label for="title">Titel (optional)</label><input id="title" name="title" maxlength="60" placeholder="z. B. Team Nova vs. Sephora"></div>
+    <div class="f2">
+      <div class="fi"><label for="mode">Modus</label><select id="mode" name="mode"><option>3v3</option><option>2v2</option><option>1v1</option></select></div>
+      <div class="fi"><label for="rank">Durchschnittsrang</label><select id="rank" name="rank"><option>Gold</option><option>Platin</option><option>Diamant</option><option selected>Champion</option><option>Grand Champion</option><option>Supersonic Legend</option></select></div>
+    </div>
+    <div class="f2">
+      <div class="fi only-create"><label for="when">Wunschtermin</label><input id="when" name="when" type="datetime-local"></div>
+      <div class="fi"><label for="mail">E-Mail (optional)</label><input id="mail" name="email" type="email" maxlength="80"></div>
+    </div>
+    <div class="fi"><label for="msgt">Nachricht</label><textarea id="msgt" name="message" maxlength="400" placeholder="Bo3 / Bo5, Region, Besonderheiten …"></textarea></div>
+    <button class="btn pri" type="submit">Anfrage senden →</button>
+    <p class="msg" id="formMsg" role="status"></p>
+    <p class="note">Deine Anfrage geht direkt an unser Discord-Team und per E-Mail an Sephora. Nach der Freigabe erscheint der Scrim auf dem Server und hier. <a href="privacy/" style="text-decoration:underline">Datenschutz</a></p>
+  </form>
+</div></section>
+
+<section id="team"><div class="wrap">
+  <div class="head rv"><div><span class="kicker">Roster</span><h2>Das Team</h2></div><p>Automatisch aktualisiert aus den Rollen auf unserem Discord-Server.</p></div>
+  <div class="team" id="roster"></div>
+</div></section>
+
+<section id="tiktok"><div class="wrap split">
+  <div class="rv"><span class="kicker">TikTok</span><div class="head" style="margin-bottom:18px"><h2>Highlights &amp; Clips</h2></div>
+    <p style="color:var(--mut)" id="ttText">Unsere besten Plays, Edits und Behind the Scenes.</p>
+    <div class="cta" style="justify-content:flex-start"><a class="btn pri" id="ttLink" href="https://www.tiktok.com/" target="_blank" rel="noopener">Auf TikTok folgen</a></div></div>
+  <div class="card rv" id="ttCard" style="min-height:220px;display:flex;align-items:flex-end"><div><span class="tag">Neuestes Video</span><h3 id="ttTitle">–</h3><p class="meta">Neue Uploads werden automatisch im Discord angekündigt.</p></div></div>
+</div></section>
+
+<section class="join" id="join"><div class="wrap rv">
+  <h2>Werde Teil von<br>Sephora.</h2>
+  <p class="lead">Daily-Rewards, Voice-Punkte, eigene Scrims und ein Shop mit echten Prämien.</p>
+  <div class="cta"><a class="btn pri" data-invite href="#">Discord beitreten →</a></div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <span>© <span id="y"></span> Sephora E-Sports · Nicht mit Psyonix oder Epic Games verbunden.</span>
+  <nav><a href="privacy/">Privacy Policy</a><a href="terms/">Terms of Service</a></nav>
+</div></footer>
+
+<script src="assets/config.js"></script>
+<script src="assets/app.js"></script>
+</body>
 </html>
