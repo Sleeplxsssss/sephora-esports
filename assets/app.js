@@ -1,0 +1,84 @@
+(() => {
+  const $ = s => document.querySelector(s);
+  const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  $('#y').textContent = new Date().getFullYear();
+
+  // reveal on scroll
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), {threshold: .12});
+  const observe = () => document.querySelectorAll('.rv:not(.in)').forEach((el, i) => { el.style.transitionDelay = (i % 6) * 60 + 'ms'; io.observe(el); });
+  observe();
+
+  // cursor glow on cards
+  document.addEventListener('pointermove', e => {
+    const c = e.target.closest && e.target.closest('.card'); if (!c) return;
+    const r = c.getBoundingClientRect(); c.style.setProperty('--mx', (e.clientX - r.left) + 'px'); c.style.setProperty('--my', (e.clientY - r.top) + 'px');
+  });
+
+  const count = (el, to) => {
+    if (to == null) { el.textContent = '–'; return; }
+    const t0 = performance.now(), d = 1200;
+    const step = t => { const p = Math.min(1, (t - t0) / d); el.textContent = Math.round(to * (1 - Math.pow(1 - p, 3))).toLocaleString('de-DE'); if (p < 1) requestAnimationFrame(step); };
+    requestAnimationFrame(step);
+  };
+  const fmt = ts => new Date(ts * 1000).toLocaleString('de-DE', {weekday: 'short', day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Berlin'});
+
+  fetch('data/discord.json?' + Date.now(), {cache: 'no-store'}).then(r => r.json()).then(d => {
+    const now = Date.now() / 1000;
+    const scrims = (d.scrims || []).filter(s => s.starts > now - 3600);
+    if (d.invite) document.querySelectorAll('[data-invite]').forEach(a => { a.href = d.invite; a.target = '_blank'; a.rel = 'noopener'; });
+    count($('[data-n=members]'), d.members); count($('[data-n=online]'), d.online); count($('[data-n=scrims]'), scrims.length); count($('[data-n=boosts]'), d.boosts);
+    if (d.online != null) $('#live').textContent = d.online + ' gerade online';
+
+    $('#scrimList').innerHTML = scrims.length ? scrims.map(s => {
+      const slots = Array.from({length: s.size}, (_, i) => `<i class="${i < s.filled ? 'on' : ''}"></i>`).join('');
+      return `<article class="card rv"><div class="row"><span class="tag">${esc(s.mode)} · ${esc(s.type)}</span><span class="meta">#${s.id}</span></div>
+        <h3>${esc(s.title)}</h3>${(s.opponents||[]).length ? `<p class="vs">🆚 ${s.opponents.map(esc).join(' · ')}</p>` : ''}<p class="meta">${fmt(s.starts)} Uhr</p>
+        <div class="slots">${slots}</div>
+        <div class="row"><span class="meta">${s.filled}/${s.size} Plätze${s.details ? ' · ' + esc(s.details.slice(0, 60)) : ''}</span>
+        <a class="btn" href="#anmelden" data-scrim="${s.id}">Anmelden</a></div></article>`;
+    }).join('') : '<div class="empty">Gerade keine offenen Scrims. Erstell einen auf Discord oder frag uns unten an.</div>';
+    const sel = $('#scrimid'); if (scrims.length) sel.innerHTML = '';
+    scrims.forEach(s => sel.insertAdjacentHTML('beforeend', `<option value="${s.id}">#${s.id} · ${esc(s.title)} (${fmt(s.starts)})</option>`));
+    document.querySelectorAll('[data-scrim]').forEach(b => b.addEventListener('click', () => window.sephiraJoin(b.dataset.scrim)));
+
+    $('#roster').innerHTML = (d.roster || []).filter(s => s.members.length).map(s => `<div class="rv"><h3>${esc(s.title)}</h3>${(s.opponents||[]).length ? `<p class="vs">🆚 ${s.opponents.map(esc).join(' · ')}</p>` : ''}<div class="people">${
+      s.members.map(m => `<div class="p"><img loading="lazy" src="${esc(m.avatar)}" alt=""><span><b>${esc(m.name)}</b><small>${esc(m.role)}</small></span></div>`).join('')}</div></div>`).join('')
+      || '<div class="empty">Roster folgt.</div>';
+
+    const tt = d.tiktok || {};
+    if (tt.username) { $('#ttLink').href = 'https://www.tiktok.com/@' + encodeURIComponent(tt.username); $('#ttText').textContent = '@' + tt.username + ' – unsere besten Plays, Edits und Behind the Scenes.'; }
+    if (tt.title) $('#ttTitle').textContent = tt.title;
+    if (tt.latest && tt.username) $('#ttCard').onclick = () => window.open(`https://www.tiktok.com/@${encodeURIComponent(tt.username)}/video/${encodeURIComponent(tt.latest)}`, '_blank', 'noopener');
+    observe();
+  }).catch(() => { $('#scrimList').innerHTML = '<div class="empty">Daten konnten nicht geladen werden.</div>'; });
+
+  // form: Discord (via Worker) + E-Mail (FormSubmit)
+  const f = $('#signup'); let type = 'create';
+  const setType = t => {
+    type = t; f.querySelectorAll('.seg button').forEach(b => b.classList.toggle('on', b.dataset.type === t));
+    f.querySelectorAll('.only-join').forEach(e => e.hidden = t !== 'join'); f.querySelectorAll('.only-create').forEach(e => e.hidden = t !== 'create');
+  };
+  f.querySelectorAll('.seg button').forEach(b => b.addEventListener('click', () => setType(b.dataset.type)));
+  window.sephiraJoin = id => { setType('join'); const s = $('#scrimid'); const o = [...s.options].find(o => o.value === String(id)); if (o) s.value = o.value; };
+  f.addEventListener('submit', async e => {
+    e.preventDefault();
+    const m = $('#formMsg'), b = f.querySelector('button[type=submit]'), d = Object.fromEntries(new FormData(f)); d.type = type;
+    if (d._honey) return;
+    if (!d.team || !d.discord || (type === 'create' && !d.when) || (type === 'join' && !d.scrim)) { m.style.color = '#ff8f8f'; m.textContent = 'Bitte Teamname, Discord-Name und ' + (type === 'create' ? 'Termin' : 'Scrim') + ' angeben.'; return; }
+    b.disabled = true; m.style.color = ''; m.textContent = 'Wird gesendet …';
+    const cfg = window.SEPHIRA || {}; let sent = false;
+    if (cfg.endpoint) {
+      try { const r = await fetch(cfg.endpoint, {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(d)}); sent = r.ok; } catch {}
+    }
+    try {
+      const fd = new FormData(); fd.append('_subject', (type === 'create' ? 'Neue Scrim-Anfrage' : 'Scrim-Anmeldung #' + d.scrim) + ' · ' + d.team);
+      fd.append('_template', 'table'); fd.append('_captcha', 'false');
+      for (const [k, v] of Object.entries(d)) if (v && k !== '_honey') fd.append(k, v);
+      const r = await fetch('https://formsubmit.co/ajax/' + (cfg.email || 'sephoraesports250@gmail.com'), {method: 'POST', headers: {Accept: 'application/json'}, body: fd});
+      sent = sent || r.ok;
+    } catch {}
+    if (sent) { m.style.color = 'var(--ok)'; m.textContent = '✓ Anfrage gesendet! Das Team gibt sie im Discord frei.'; f.reset(); setType(type); }
+    else { m.style.color = '#ff8f8f'; m.textContent = 'Senden fehlgeschlagen. Bitte versuch es später erneut oder schreib uns auf Discord.'; }
+    b.disabled = false;
+  });
+})();
