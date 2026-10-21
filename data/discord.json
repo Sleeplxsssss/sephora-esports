@@ -1,5 +1,5 @@
 {
- "updated": 1792590935,
+ "updated": 1792592757,
  "name": "Sephora E-Sports",
  "members": 194,
  "online": null,
@@ -7,7 +7,7 @@
  "tier": 3,
  "icon": "https://cdn.discordapp.com/icons/1519752198244798754/a_690a99121cb93d9d0094014c3bea4757.gif?size=1024",
  "banner": "https://cdn.discordapp.com/banners/1519752198244798754/a_041531b2d6c4c3182249dbc041bb5366.gif?size=1024",
- "invite": "https://discord.gg/A4JvxzRy6d",
+ "invite": null,
  "roster": [
   {
    "title": "Staff",
@@ -116,10 +116,25 @@
    "members": []
   }
  ],
- "scrims": [],
+ "scrims": [
+  {
+   "id": 4,
+   "title": "Team Aura",
+   "starts": 1792719780,
+   "mode": "3v3",
+   "size": 3,
+   "filled": 0,
+   "details": "Gegner: Test\nRang: Grand Champion\nTest",
+   "status": "open",
+   "type": "Scrim",
+   "opponents": [
+    "Test"
+   ]
+  }
+ ],
  "tiktok": {
   "username": "sephoraesport",
-  "latest": "7698060489925954838",
-  "title": "Don't let me down x Rocket League >>>"
+  "latest": null,
+  "title": null
  }
 }
