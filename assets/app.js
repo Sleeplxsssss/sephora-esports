@@ -41,10 +41,11 @@
 
   fetch('data/discord.json?' + Date.now(), {cache: 'no-store'}).then(r => r.json()).then(d => {
     const now = Date.now() / 1000;
-    const scrims = (d.scrims || []).filter(s => s.starts > now - 3600);
+    const scrims = (d.scrims || []).filter(s => s.starts > now - 3600 && (!s.status || s.status === 'open' || s.status === 'forming'));
     if (d.invite) document.querySelectorAll('[data-invite]').forEach(a => { a.href = d.invite; a.target = '_blank'; a.rel = 'noopener'; });
     count($('[data-n=members]'), d.members); count($('[data-n=online]'), d.online); count($('[data-n=scrims]'), scrims.length); count($('[data-n=boosts]'), d.boosts);
     if (d.online != null) $('#live').textContent = d.online + ' gerade online';
+    window.__d = d; buildTicker(d, scrims.length); liveCounts(d);
 
     $('#scrimList').innerHTML = scrims.length ? scrims.map(s => {
       const slots = Array.from({length: s.size}, (_, i) => `<i class="${i < s.filled ? 'on' : ''}"></i>`).join('');
@@ -62,7 +63,7 @@
       s.members.map(m => `<div class="p"><img loading="lazy" src="${esc(m.avatar)}" alt=""><span><b>${esc(m.name)}</b><small style="color:${m.color ? '#' + m.color.toString(16).padStart(6, '0') : 'var(--mut)'}">${m.role_icon ? `<img class="ri" src="${esc(m.role_icon)}" alt="">` : ''}${esc(m.role)}</small></span></div>`).join('')}</div></div>`).join('')
       || '<div class="empty">Roster folgt.</div>';
 
-    const tt = d.tiktok || {};
+    const tt = Object.assign({username: 'sephoraesport'}, d.tiktok || {}); if (!tt.latest) tt.latest = (window.SEPHIRA || {}).tiktokFallback || '7698060489925954838';
     if (tt.title) $('#ttTitle').textContent = tt.title;
     if (tt.latest) {
       $('#ttLink').href = `https://www.tiktok.com/@${encodeURIComponent(tt.username || 'sephoraesport')}/video/${encodeURIComponent(tt.latest)}`;
@@ -76,6 +77,39 @@
       document.head.appendChild(ld); }
     observe();
   }).catch(() => { $('#scrimList').innerHTML = '<div class="empty">Daten konnten nicht geladen werden.</div>'; });
+
+  // rotating word
+  const words = ['Scrims', 'Turniere', 'Coaching', 'Giveaways', 'Rewards', 'Community'];
+  let wi = 0; const rot = $('#rot');
+  if (rot && !reduce) setInterval(() => {
+    const old = rot.querySelector('b'); old.classList.add('out'); setTimeout(() => old.remove(), 450);
+    wi = (wi + 1) % words.length; const b = document.createElement('b'); b.textContent = words[wi]; rot.appendChild(b);
+  }, 2400);
+
+  // infinite ticker
+  function buildTicker(d, nScrims) {
+    const items = [`<i>●</i> <b>${d.online ?? '–'}</b> gerade online`, `👥 <b>${d.members ?? '–'}</b> Mitglieder`, `⚔️ Scrims in <b>1v1 · 2v2 · 3v3</b>`,
+      `🗓️ <b>${nScrims}</b> offene Scrims`, `🚀 <b>${d.boosts ?? 0}</b> Server-Boosts`, '🎁 Punkte sammeln & <b>Prämien</b> holen', '🏆 Roster · Academy · Main',
+      '🎟️ <b>Giveaways</b> jeden Monat', '🎵 TikTok <b>@sephoraesport</b>', '🌸 <b>sephoraesports.de</b>'];
+    const html = items.map(x => `<span>${x}</span><span><i>✦</i></span>`).join('');
+    const t = $('#ticker'); if (t) t.innerHTML = html + html;
+  }
+
+  // live member/online counts straight from Discord (refresh every 60 s)
+  function liveCounts(d) {
+    const code = (d.invite || 'https://discord.gg/A4JvxzRy6d').split('/').pop();
+    const upd = async () => {
+      try {
+        const r = await fetch(`https://discord.com/api/v10/invites/${code}?with_counts=true`); if (!r.ok) return;
+        const j = await r.json(); const bots = Math.max(0, (j.approximate_member_count || 0) - (d.members || j.approximate_member_count));
+        const online = Math.max(0, (j.approximate_presence_count || 0) - bots), members = (j.approximate_member_count || 0) - bots;
+        const set = (k, v) => { const el = $(`[data-n=${k}]`); if (el && el.textContent !== v.toLocaleString('de-DE')) { el.textContent = v.toLocaleString('de-DE'); el.classList.remove('bump'); void el.offsetWidth; el.classList.add('bump'); } };
+        setTimeout(() => { set('online', online); set('members', members); }, 1300);
+        $('#live').textContent = online + ' gerade online'; d.online = online; d.members = members; buildTicker(d, (d.scrims || []).filter(s => s.status === 'open').length);
+      } catch {}
+    };
+    upd(); setInterval(upd, 60000);
+  }
 
   // form: Discord (via Worker) + E-Mail (FormSubmit)
   const f = $('#signup'); let type = 'create';

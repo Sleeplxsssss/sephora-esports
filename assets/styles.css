@@ -133,3 +133,24 @@ a:hover>.arr,.btn:hover .arr{transform:translateX(4px)}
 @media (max-width:860px){.socials{grid-template-columns:1fr}.player{margin:0 auto}}
 .p>span{min-width:0}.p b{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 body{font-family:Inter,system-ui,'Segoe UI Symbol','Noto Sans Symbols 2','Apple Color Emoji','Segoe UI Emoji',sans-serif}
+
+/* live motion */
+body::after{content:"";position:fixed;inset:-20%;z-index:-1;pointer-events:none;background:radial-gradient(40% 35% at 20% 30%,rgba(183,148,255,.16),transparent 70%),radial-gradient(35% 30% at 80% 60%,rgba(255,138,212,.12),transparent 70%),radial-gradient(30% 30% at 50% 90%,rgba(110,170,255,.10),transparent 70%);animation:aurora 22s ease-in-out infinite alternate}
+@keyframes aurora{0%{transform:translate3d(0,0,0) rotate(0)}50%{transform:translate3d(4%,-3%,0) rotate(8deg)}100%{transform:translate3d(-4%,3%,0) rotate(-6deg)}}
+h1 span{background-size:220% 100%;animation:shine 6s linear infinite}
+@keyframes shine{0%{background-position:0% 50%}100%{background-position:-220% 50%}}
+.rot{display:inline-block;position:relative;min-width:6.2em;text-align:left;vertical-align:bottom;height:1.5em;overflow:hidden}
+.rot b{position:absolute;left:0;top:0;color:var(--txt,#fff);background:linear-gradient(90deg,var(--acc),var(--acc2));-webkit-background-clip:text;background-clip:text;color:transparent;animation:rotIn .55s cubic-bezier(.2,.8,.2,1) both}
+.rot b.out{animation:rotOut .45s ease both}
+@keyframes rotIn{from{transform:translateY(100%);opacity:0;filter:blur(6px)}to{transform:none;opacity:1;filter:none}}
+@keyframes rotOut{to{transform:translateY(-100%);opacity:0;filter:blur(6px)}}
+.ticker{border-block:1px solid var(--line);overflow:hidden;padding:16px 0;background:rgba(255,255,255,.012);-webkit-mask:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.ticker .track{display:flex;gap:46px;width:max-content;animation:tick 38s linear infinite;font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--mut);white-space:nowrap}
+.ticker .track span{display:inline-flex;align-items:center;gap:10px}
+.ticker .track b{color:#fff;font-weight:600}
+.ticker .track i{color:var(--acc);font-style:normal}
+.ticker:hover .track{animation-play-state:paused}
+@keyframes tick{to{transform:translateX(-50%)}}
+.stat b.bump{animation:bump .6s ease}
+@keyframes bump{40%{transform:scale(1.12);color:var(--acc)}}
+@media (prefers-reduced-motion:reduce){body::after,h1 span,.ticker .track,.rot b{animation:none!important}}
