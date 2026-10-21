@@ -10,6 +10,7 @@
 <meta property="og:image" content="assets/og.jpg">
 <meta name="theme-color" content="#07070a">
 <link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
@@ -54,7 +55,7 @@
     </ol>
   </div>
   <form class="form rv" id="signup" novalidate>
-    <div class="seg" role="tablist">
+    <div class="seg" role="tablist" data-t="create">
       <button type="button" class="on" data-type="create">➕ Scrim erstellen</button>
       <button type="button" data-type="join">🤝 Bei Scrim anmelden</button>
     </div>
@@ -104,7 +105,8 @@
   <nav><a href="privacy/">Privacy Policy</a><a href="terms/">Terms of Service</a></nav>
 </div></footer>
 
-<script src="assets/config.js"></script>
-<script src="assets/app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+<script src="assets/config.js" defer></script>
+<script src="assets/app.js" defer></script>
 </body>
 </html>
