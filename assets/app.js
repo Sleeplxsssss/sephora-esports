@@ -66,6 +66,12 @@
     if (tt.username) { $('#ttLink').href = 'https://www.tiktok.com/@' + encodeURIComponent(tt.username); $('#ttText').textContent = '@' + tt.username + ' – unsere besten Plays, Edits und Behind the Scenes.'; }
     if (tt.title) $('#ttTitle').textContent = tt.title;
     if (tt.latest && tt.username) $('#ttCard').onclick = () => window.open(`https://www.tiktok.com/@${encodeURIComponent(tt.username)}/video/${encodeURIComponent(tt.latest)}`, '_blank', 'noopener');
+    if (scrims.length) { const ld = document.createElement('script'); ld.type = 'application/ld+json';
+      ld.textContent = JSON.stringify(scrims.map(s => ({'@context': 'https://schema.org', '@type': 'Event', name: 'Rocket League Scrim ' + s.mode + ': ' + s.title,
+        startDate: new Date(s.starts * 1000).toISOString(), eventStatus: 'https://schema.org/EventScheduled', eventAttendanceMode: 'https://schema.org/OnlineEventAttendanceMode',
+        location: {'@type': 'VirtualLocation', url: location.origin + '/#anmelden'}, organizer: {'@type': 'SportsTeam', name: 'Sephora E-Sports', url: location.origin + '/'},
+        description: 'Offener Rocket League Scrim (' + s.mode + ') – jetzt anmelden.'})));
+      document.head.appendChild(ld); }
     observe();
   }).catch(() => { $('#scrimList').innerHTML = '<div class="empty">Daten konnten nicht geladen werden.</div>'; });
 
