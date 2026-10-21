@@ -1,8 +1,8 @@
 {
- "updated": 1792596488,
+ "updated": 1792600132,
  "name": "Sephora E-Sports",
- "members": 190,
- "online": 58,
+ "members": 191,
+ "online": 64,
  "boosts": 20,
  "tier": 3,
  "invite": "https://discord.gg/A4JvxzRy6d",
@@ -23,6 +23,13 @@
      "role_icon": "https://cdn.discordapp.com/role-icons/1519752289735282728/326ef626f1035ef73f550df76f1662c5.png?size=64",
      "color": 16699986,
      "avatar": "https://cdn.discordapp.com/avatars/1417597509156475051/ab29f76f5f967198af6f9e5ef97cd35e.png?size=128"
+    },
+    {
+     "name": "Wazy.rl",
+     "role": "Owner",
+     "role_icon": "https://cdn.discordapp.com/role-icons/1519752289735282728/326ef626f1035ef73f550df76f1662c5.png?size=64",
+     "color": 16699986,
+     "avatar": "https://cdn.discordapp.com/avatars/1547732154522275871/8f5a7fb22fd86cb344d47be15aaa7895.png?size=128"
     },
     {
      "name": "Aziz",
@@ -56,13 +63,6 @@
      "role_icon": "https://cdn.discordapp.com/role-icons/1525957538476982392/273ff2ba83ca24f8a7aa87515cc504cb.png?size=64",
      "color": 6808282,
      "avatar": "https://cdn.discordapp.com/avatars/870685508706140240/4dc1b2e2d39dfc5628628218794cadd3.png?size=128"
-    },
-    {
-     "name": "Schmeeegt_Legger",
-     "role": "Coach",
-     "role_icon": "https://cdn.discordapp.com/role-icons/1525957538476982392/273ff2ba83ca24f8a7aa87515cc504cb.png?size=64",
-     "color": 6808282,
-     "avatar": "https://cdn.discordapp.com/avatars/821760599989420042/a4b4dfb2cc12d9117f53e52045f6c1c3.png?size=128"
     },
     {
      "name": "Aziz",
