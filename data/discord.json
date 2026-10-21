@@ -1,8 +1,8 @@
 {
- "updated": 1792614709,
+ "updated": 1792617241,
  "name": "Sephora E-Sports",
  "members": 193,
- "online": 58,
+ "online": 53,
  "boosts": 20,
  "tier": 3,
  "invite": "https://discord.gg/A4JvxzRy6d",
@@ -125,7 +125,22 @@
    "members": []
   }
  ],
- "scrims": [],
+ "scrims": [
+  {
+   "id": 17,
+   "title": "BLYNZ. ESPORTS vs. Sephora",
+   "starts": 1792863000,
+   "mode": "3v3",
+   "size": 3,
+   "filled": 1,
+   "details": "Gegner: BLYNZ. ESPORTS\n\nKönnen Freitag und Samstag, haben zwei teams in 3s. Eins auf GC3 Niveau und eins auf C3-GC1. Würden gerne ein BO7 machen. Region: EU",
+   "status": "open",
+   "type": "Scrim",
+   "opponents": [
+    "BLYNZ. ESPORTS"
+   ]
+  }
+ ],
  "tiktok": {
   "username": "sephoraesport",
   "latest": "7698060489925954838",
