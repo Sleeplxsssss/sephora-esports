@@ -9,10 +9,27 @@
   observe();
 
   // cursor glow on cards
+  let pm = null;
   document.addEventListener('pointermove', e => {
-    const c = e.target.closest && e.target.closest('.card'); if (!c) return;
-    const r = c.getBoundingClientRect(); c.style.setProperty('--mx', (e.clientX - r.left) + 'px'); c.style.setProperty('--my', (e.clientY - r.top) + 'px');
-  });
+    if (pm) return; pm = requestAnimationFrame(() => { pm = null;
+      const c = e.target.closest && e.target.closest('.card'); if (!c) return;
+      const r = c.getBoundingClientRect(); c.style.setProperty('--mx', (e.clientX - r.left) + 'px'); c.style.setProperty('--my', (e.clientY - r.top) + 'px'); });
+  }, {passive: true});
+
+  // smooth scrolling (Lenis) + nav state
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let lenis = null;
+  if (window.Lenis && !reduce) {
+    lenis = new Lenis({duration: 1.1, easing: t => 1 - Math.pow(1 - t, 4), smoothWheel: true});
+    const raf = t => { lenis.raf(t); requestAnimationFrame(raf); }; requestAnimationFrame(raf);
+    document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', e => {
+      const id = a.getAttribute('href'); if (id.length < 2) return; const el = document.querySelector(id);
+      if (el) { e.preventDefault(); lenis.scrollTo(el, {offset: -70}); }
+    }));
+  }
+  const nav = document.querySelector('.nav');
+  const onScroll = () => nav.classList.toggle('scrolled', scrollY > 8);
+  (lenis ? lenis.on.bind(lenis, 'scroll') : f => addEventListener('scroll', f, {passive: true}))(onScroll); onScroll();
 
   const count = (el, to) => {
     if (to == null) { el.textContent = '–'; return; }
@@ -39,7 +56,7 @@
     }).join('') : '<div class="empty">Gerade keine offenen Scrims. Erstell einen auf Discord oder frag uns unten an.</div>';
     const sel = $('#scrimid'); if (scrims.length) sel.innerHTML = '';
     scrims.forEach(s => sel.insertAdjacentHTML('beforeend', `<option value="${s.id}">#${s.id} · ${esc(s.title)} (${fmt(s.starts)})</option>`));
-    document.querySelectorAll('[data-scrim]').forEach(b => b.addEventListener('click', () => window.sephiraJoin(b.dataset.scrim)));
+    document.querySelectorAll('[data-scrim]').forEach(b => b.addEventListener('click', e => { window.sephiraJoin(b.dataset.scrim); if (lenis) { e.preventDefault(); lenis.scrollTo('#anmelden', {offset: -70}); } }));
 
     $('#roster').innerHTML = (d.roster || []).filter(s => s.members.length).map(s => `<div class="rv"><h3>${esc(s.title)}</h3>${(s.opponents||[]).length ? `<p class="vs">🆚 ${s.opponents.map(esc).join(' · ')}</p>` : ''}<div class="people">${
       s.members.map(m => `<div class="p"><img loading="lazy" src="${esc(m.avatar)}" alt=""><span><b>${esc(m.name)}</b><small>${esc(m.role)}</small></span></div>`).join('')}</div></div>`).join('')
@@ -55,8 +72,9 @@
   // form: Discord (via Worker) + E-Mail (FormSubmit)
   const f = $('#signup'); let type = 'create';
   const setType = t => {
-    type = t; f.querySelectorAll('.seg button').forEach(b => b.classList.toggle('on', b.dataset.type === t));
-    f.querySelectorAll('.only-join').forEach(e => e.hidden = t !== 'join'); f.querySelectorAll('.only-create').forEach(e => e.hidden = t !== 'create');
+    type = t; f.querySelector('.seg').dataset.t = t; f.querySelectorAll('.seg button').forEach(b => b.classList.toggle('on', b.dataset.type === t));
+    f.querySelectorAll('.only-join').forEach(e => { e.hidden = t !== 'join'; e.classList.remove('swap'); void e.offsetWidth; e.classList.add('swap'); });
+    f.querySelectorAll('.only-create').forEach(e => { e.hidden = t !== 'create'; e.classList.remove('swap'); void e.offsetWidth; e.classList.add('swap'); });
   };
   f.querySelectorAll('.seg button').forEach(b => b.addEventListener('click', () => setType(b.dataset.type)));
   window.sephiraJoin = id => { setType('join'); const s = $('#scrimid'); const o = [...s.options].find(o => o.value === String(id)); if (o) s.value = o.value; };
