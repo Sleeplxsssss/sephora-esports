@@ -59,13 +59,15 @@
     document.querySelectorAll('[data-scrim]').forEach(b => b.addEventListener('click', e => { window.sephiraJoin(b.dataset.scrim); if (lenis) { e.preventDefault(); lenis.scrollTo('#anmelden', {offset: -70}); } }));
 
     $('#roster').innerHTML = (d.roster || []).filter(s => s.members.length).map(s => `<div class="rv"><h3>${esc(s.title)}</h3>${(s.opponents||[]).length ? `<p class="vs">🆚 ${s.opponents.map(esc).join(' · ')}</p>` : ''}<div class="people">${
-      s.members.map(m => `<div class="p"><img loading="lazy" src="${esc(m.avatar)}" alt=""><span><b>${esc(m.name)}</b><small>${esc(m.role)}</small></span></div>`).join('')}</div></div>`).join('')
+      s.members.map(m => `<div class="p"><img loading="lazy" src="${esc(m.avatar)}" alt=""><span><b>${esc(m.name)}</b><small style="color:${m.color ? '#' + m.color.toString(16).padStart(6, '0') : 'var(--mut)'}">${m.role_icon ? `<img class="ri" src="${esc(m.role_icon)}" alt="">` : ''}${esc(m.role)}</small></span></div>`).join('')}</div></div>`).join('')
       || '<div class="empty">Roster folgt.</div>';
 
     const tt = d.tiktok || {};
-    if (tt.username) { $('#ttLink').href = 'https://www.tiktok.com/@' + encodeURIComponent(tt.username); $('#ttText').textContent = '@' + tt.username + ' – unsere besten Plays, Edits und Behind the Scenes.'; }
     if (tt.title) $('#ttTitle').textContent = tt.title;
-    if (tt.latest && tt.username) $('#ttCard').onclick = () => window.open(`https://www.tiktok.com/@${encodeURIComponent(tt.username)}/video/${encodeURIComponent(tt.latest)}`, '_blank', 'noopener');
+    if (tt.latest) {
+      $('#ttLink').href = `https://www.tiktok.com/@${encodeURIComponent(tt.username || 'sephoraesport')}/video/${encodeURIComponent(tt.latest)}`;
+      $('#ttPlayer').innerHTML = `<iframe src="https://www.tiktok.com/player/v1/${encodeURIComponent(tt.latest)}?music_info=1&description=0&rel=0&controls=1&progress_bar=1&play_button=1&volume_control=1&fullscreen_button=1" allow="autoplay; fullscreen; encrypted-media; picture-in-picture" loading="lazy" title="Neuestes TikTok-Video"></iframe>`;
+    } else $('#ttPlayer').innerHTML = '<div class="empty">Noch kein Video</div>';
     if (scrims.length) { const ld = document.createElement('script'); ld.type = 'application/ld+json';
       ld.textContent = JSON.stringify(scrims.map(s => ({'@context': 'https://schema.org', '@type': 'Event', name: 'Rocket League Scrim ' + s.mode + ': ' + s.title,
         startDate: new Date(s.starts * 1000).toISOString(), eventStatus: 'https://schema.org/EventScheduled', eventAttendanceMode: 'https://schema.org/OnlineEventAttendanceMode',
