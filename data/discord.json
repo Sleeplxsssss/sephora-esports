@@ -1,8 +1,8 @@
 {
- "updated": 1792773522,
+ "updated": 1792776938,
  "name": "Sephora E-Sports",
- "members": 221,
- "online": 72,
+ "members": 222,
+ "online": 82,
  "boosts": 20,
  "tier": 3,
  "invite": "https://discord.gg/A4JvxzRy6d",
@@ -123,6 +123,13 @@
   {
    "title": "Second Team",
    "members": [
+    {
+     "name": "Collin",
+     "role": "Second Team",
+     "role_icon": "https://cdn.discordapp.com/role-icons/1528401366245052537/7587738e61dcc170f0b2b3e3cc377ff7.png?size=64",
+     "color": 13807359,
+     "avatar": "https://cdn.discordapp.com/avatars/1277910794553790505/9376ae7509810ac4affcda3ec57a458d.png?size=128"
+    },
     {
      "name": "Sleepy  𓆩✧𓆪",
      "role": "Second Team",
