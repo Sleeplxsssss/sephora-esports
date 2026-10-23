@@ -1,8 +1,8 @@
 {
- "updated": 1792752049,
+ "updated": 1792755693,
  "name": "Sephora E-Sports",
- "members": 213,
- "online": 48,
+ "members": 218,
+ "online": 57,
  "boosts": 20,
  "tier": 3,
  "invite": "https://discord.gg/A4JvxzRy6d",
@@ -110,11 +110,27 @@
   },
   {
    "title": "Main Team",
-   "members": []
+   "members": [
+    {
+     "name": "Plusi",
+     "role": "Main Team",
+     "role_icon": "https://cdn.discordapp.com/role-icons/1528401313845743787/2d2fda531578e36486d82e4624783030.png?size=64",
+     "color": 15715583,
+     "avatar": "https://cdn.discordapp.com/avatars/1273316013496074414/a_c0bd575be70a895aca3aac1bfb91e4df.gif?size=128"
+    }
+   ]
   },
   {
    "title": "Second Team",
-   "members": []
+   "members": [
+    {
+     "name": "Sleepy  𓆩✧𓆪",
+     "role": "Second Team",
+     "role_icon": "https://cdn.discordapp.com/role-icons/1528401366245052537/7587738e61dcc170f0b2b3e3cc377ff7.png?size=64",
+     "color": 13807359,
+     "avatar": "https://cdn.discordapp.com/avatars/706235782612123778/3e45e96e51cd03a262d3f8fc3746c500.png?size=128"
+    }
+   ]
   },
   {
    "title": "Academy",
