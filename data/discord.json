@@ -1,8 +1,8 @@
 {
- "updated": 1793369417,
+ "updated": 1793373062,
  "name": "Sephora E-Sports",
- "members": 231,
- "online": 66,
+ "members": 230,
+ "online": 65,
  "boosts": 20,
  "tier": 3,
  "invite": "https://discord.gg/A4JvxzRy6d",
@@ -39,13 +39,6 @@
      "avatar": "https://cdn.discordapp.com/avatars/1164208053709709424/6f4219cd6c22292d6b92592446389fc8.png?size=128"
     },
     {
-     "name": "Sleepy  𓆩✧𓆪",
-     "role": "Admin",
-     "role_icon": "https://cdn.discordapp.com/role-icons/1526933858849914904/0e39793026a4fe7dc475b0402ccef58b.png?size=64",
-     "color": 16740228,
-     "avatar": "https://cdn.discordapp.com/avatars/706235782612123778/3e45e96e51cd03a262d3f8fc3746c500.png?size=128"
-    },
-    {
      "name": "Einmal2",
      "role": "Moderation",
      "role_icon": "https://cdn.discordapp.com/role-icons/1520029362420715520/a55d504fddad29e7829c307d8750c68d.png?size=64",
@@ -70,13 +63,6 @@
      "role_icon": "https://cdn.discordapp.com/role-icons/1520029279453184051/a70211e691728fab6fc8feac5b425929.png?size=64",
      "color": 16750010,
      "avatar": "https://cdn.discordapp.com/avatars/1164208053709709424/6f4219cd6c22292d6b92592446389fc8.png?size=128"
-    },
-    {
-     "name": "Sleepy  𓆩✧𓆪",
-     "role": "Content Creator",
-     "role_icon": "https://cdn.discordapp.com/role-icons/1520029279453184051/a70211e691728fab6fc8feac5b425929.png?size=64",
-     "color": 16750010,
-     "avatar": "https://cdn.discordapp.com/avatars/706235782612123778/3e45e96e51cd03a262d3f8fc3746c500.png?size=128"
     },
     {
      "name": "Plusi",
@@ -122,13 +108,6 @@
      "role_icon": "https://cdn.discordapp.com/role-icons/1528401366245052537/7587738e61dcc170f0b2b3e3cc377ff7.png?size=64",
      "color": 13807359,
      "avatar": "https://cdn.discordapp.com/avatars/1277910794553790505/9376ae7509810ac4affcda3ec57a458d.png?size=128"
-    },
-    {
-     "name": "Sleepy  𓆩✧𓆪",
-     "role": "Second Team",
-     "role_icon": "https://cdn.discordapp.com/role-icons/1528401366245052537/7587738e61dcc170f0b2b3e3cc377ff7.png?size=64",
-     "color": 13807359,
-     "avatar": "https://cdn.discordapp.com/avatars/706235782612123778/3e45e96e51cd03a262d3f8fc3746c500.png?size=128"
     }
    ]
   },
