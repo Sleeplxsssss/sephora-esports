@@ -1,8 +1,8 @@
 {
- "updated": 1794152561,
+ "updated": 1794156204,
  "name": "Sephora E-Sports",
- "members": 234,
- "online": 82,
+ "members": 232,
+ "online": 88,
  "boosts": 20,
  "tier": 3,
  "invite": "https://discord.gg/A4JvxzRy6d",
@@ -113,15 +113,7 @@
   },
   {
    "title": "Academy",
-   "members": [
-    {
-     "name": "Zerox $",
-     "role": "Academy",
-     "role_icon": "https://cdn.discordapp.com/role-icons/1528401418707538034/5ba68fd9e3023b0c670d342adcce8957.png?size=64",
-     "color": 12425983,
-     "avatar": "https://cdn.discordapp.com/avatars/1538600470300463167/d9d0095ed5981e0db10e6a2a70bbab14.png?size=128"
-    }
-   ]
+   "members": []
   },
   {
    "title": "Kader",
