@@ -1,8 +1,8 @@
 {
- "updated": 1794240010,
+ "updated": 1794243654,
  "name": "Sephora E-Sports",
  "members": 236,
- "online": 69,
+ "online": 77,
  "boosts": 20,
  "tier": 3,
  "invite": "https://discord.gg/A4JvxzRy6d",
@@ -11,6 +11,13 @@
    "title": "Staff",
    "members": [
     {
+     "name": "Lasse",
+     "role": "Owner",
+     "role_icon": "https://cdn.discordapp.com/role-icons/1519752289735282728/326ef626f1035ef73f550df76f1662c5.png?size=64",
+     "color": 16699986,
+     "avatar": "https://cdn.discordapp.com/avatars/1464456727725342887/399445ae989700a56a9a4c6f67d3f507.png?size=128"
+    },
+    {
      "name": "Rl Bruch GER",
      "role": "Owner",
      "role_icon": "https://cdn.discordapp.com/role-icons/1519752289735282728/326ef626f1035ef73f550df76f1662c5.png?size=64",
@@ -18,18 +25,18 @@
      "avatar": "https://cdn.discordapp.com/avatars/1251407360572915743/cce51d399d500380822f3418ed5df8be.png?size=128"
     },
     {
-     "name": "Ramon",
-     "role": "Owner",
-     "role_icon": "https://cdn.discordapp.com/role-icons/1519752289735282728/326ef626f1035ef73f550df76f1662c5.png?size=64",
-     "color": 16699986,
-     "avatar": "https://cdn.discordapp.com/guilds/1519752198244798754/users/808362116917755945/avatars/ffffb8599934b54fe0779c0313a0d87e.png?size=128"
-    },
-    {
      "name": "Clausiontop",
      "role": "Owner",
      "role_icon": "https://cdn.discordapp.com/role-icons/1519752289735282728/326ef626f1035ef73f550df76f1662c5.png?size=64",
      "color": 16699986,
      "avatar": "https://cdn.discordapp.com/avatars/1417597509156475051/ab29f76f5f967198af6f9e5ef97cd35e.png?size=128"
+    },
+    {
+     "name": "Ramon",
+     "role": "Admin",
+     "role_icon": "https://cdn.discordapp.com/role-icons/1526933858849914904/0e39793026a4fe7dc475b0402ccef58b.png?size=64",
+     "color": 16740228,
+     "avatar": "https://cdn.discordapp.com/guilds/1519752198244798754/users/808362116917755945/avatars/ffffb8599934b54fe0779c0313a0d87e.png?size=128"
     },
     {
      "name": "Aziz",
