@@ -1,5 +1,5 @@
 {
- "updated": 1794261672,
+ "updated": 1794261749,
  "name": "Sephora E-Sports",
  "members": 237,
  "online": 53,
@@ -134,7 +134,20 @@
    "members": []
   }
  ],
- "scrims": [],
+ "scrims": [
+  {
+   "id": 31,
+   "title": "hjgfjhgfj",
+   "starts": 1794304800,
+   "mode": "3v3",
+   "size": 3,
+   "filled": 0,
+   "details": "Rang: jhgkjhg\nkjghkgj",
+   "status": "open",
+   "type": "Scrim",
+   "opponents": []
+  }
+ ],
  "tiktok": {
   "username": "sephoraesport",
   "latest": "7706277178664602902",
