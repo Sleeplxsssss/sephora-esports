@@ -1,8 +1,8 @@
 {
- "updated": 1794301849,
+ "updated": 1794304582,
  "name": "Sephora E-Sports",
  "members": 238,
- "online": 17,
+ "online": 19,
  "boosts": 20,
  "tier": 3,
  "invite": "https://discord.gg/A4JvxzRy6d",
@@ -134,20 +134,7 @@
    "members": []
   }
  ],
- "scrims": [
-  {
-   "id": 31,
-   "title": "hjgfjhgfj",
-   "starts": 1794304800,
-   "mode": "3v3",
-   "size": 3,
-   "filled": 0,
-   "details": "Rang: jhgkjhg\nkjghkgj",
-   "status": "open",
-   "type": "Scrim",
-   "opponents": []
-  }
- ],
+ "scrims": [],
  "tiktok": {
   "username": "sephoraesport",
   "latest": "7706277178664602902",
