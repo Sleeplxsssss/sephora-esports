@@ -1,8 +1,8 @@
 {
- "updated": 1794504575,
+ "updated": 1794507928,
  "name": "Sephora E-Sports",
  "members": 240,
- "online": 73,
+ "online": 84,
  "boosts": 20,
  "tier": 3,
  "invite": "https://discord.gg/A4JvxzRy6d",
@@ -32,13 +32,6 @@
      "avatar": "https://cdn.discordapp.com/avatars/1417597509156475051/ab29f76f5f967198af6f9e5ef97cd35e.png?size=128"
     },
     {
-     "name": "Aziz",
-     "role": "Admin",
-     "role_icon": "https://cdn.discordapp.com/role-icons/1526933858849914904/0e39793026a4fe7dc475b0402ccef58b.png?size=64",
-     "color": 16740228,
-     "avatar": "https://cdn.discordapp.com/avatars/1164208053709709424/6f4219cd6c22292d6b92592446389fc8.png?size=128"
-    },
-    {
      "name": "Sleepy  𓆩✧𓆪",
      "role": "Admin",
      "role_icon": "https://cdn.discordapp.com/role-icons/1526933858849914904/0e39793026a4fe7dc475b0402ccef58b.png?size=64",
@@ -51,6 +44,13 @@
      "role_icon": "https://cdn.discordapp.com/role-icons/1526933858849914904/0e39793026a4fe7dc475b0402ccef58b.png?size=64",
      "color": 16740228,
      "avatar": "https://cdn.discordapp.com/guilds/1519752198244798754/users/808362116917755945/avatars/ffffb8599934b54fe0779c0313a0d87e.png?size=128"
+    },
+    {
+     "name": "Aziz",
+     "role": "Admin",
+     "role_icon": "https://cdn.discordapp.com/role-icons/1526933858849914904/0e39793026a4fe7dc475b0402ccef58b.png?size=64",
+     "color": 16740228,
+     "avatar": "https://cdn.discordapp.com/avatars/1164208053709709424/6f4219cd6c22292d6b92592446389fc8.png?size=128"
     },
     {
      "name": "Einmal2",
@@ -79,18 +79,18 @@
      "avatar": "https://cdn.discordapp.com/avatars/870685508706140240/62d6474046e2fe7a2b93b02ee36ed368.png?size=128"
     },
     {
-     "name": "Plusi",
-     "role": "Content Creator",
-     "role_icon": "https://cdn.discordapp.com/role-icons/1520029279453184051/a70211e691728fab6fc8feac5b425929.png?size=64",
-     "color": 16750010,
-     "avatar": "https://cdn.discordapp.com/avatars/1273316013496074414/6a1c969e933ab75c11b16ccda8879364.png?size=128"
-    },
-    {
      "name": "Aziz",
      "role": "Content Creator",
      "role_icon": "https://cdn.discordapp.com/role-icons/1520029279453184051/a70211e691728fab6fc8feac5b425929.png?size=64",
      "color": 16750010,
      "avatar": "https://cdn.discordapp.com/avatars/1164208053709709424/6f4219cd6c22292d6b92592446389fc8.png?size=128"
+    },
+    {
+     "name": "Plusi",
+     "role": "Content Creator",
+     "role_icon": "https://cdn.discordapp.com/role-icons/1520029279453184051/a70211e691728fab6fc8feac5b425929.png?size=64",
+     "color": 16750010,
+     "avatar": "https://cdn.discordapp.com/avatars/1273316013496074414/6a1c969e933ab75c11b16ccda8879364.png?size=128"
     },
     {
      "name": "panda\\fs",
@@ -119,13 +119,6 @@
      "avatar": "https://cdn.discordapp.com/avatars/1470123941942264071/dc0259cb1460a9bdd5d59bbf97df08d6.png?size=128"
     },
     {
-     "name": "Plusi",
-     "role": "Main Team",
-     "role_icon": "https://cdn.discordapp.com/role-icons/1528401313845743787/2d2fda531578e36486d82e4624783030.png?size=64",
-     "color": 15715583,
-     "avatar": "https://cdn.discordapp.com/avatars/1273316013496074414/6a1c969e933ab75c11b16ccda8879364.png?size=128"
-    },
-    {
      "name": "Sleepy  𓆩✧𓆪",
      "role": "Main Team",
      "role_icon": "https://cdn.discordapp.com/role-icons/1528401313845743787/2d2fda531578e36486d82e4624783030.png?size=64",
@@ -138,6 +131,13 @@
      "role_icon": "https://cdn.discordapp.com/role-icons/1528401313845743787/2d2fda531578e36486d82e4624783030.png?size=64",
      "color": 15715583,
      "avatar": "https://cdn.discordapp.com/avatars/1273782014335520842/484a8dc67b4238aac83d615ec2a29bf7.png?size=128"
+    },
+    {
+     "name": "Plusi",
+     "role": "Main Team",
+     "role_icon": "https://cdn.discordapp.com/role-icons/1528401313845743787/2d2fda531578e36486d82e4624783030.png?size=64",
+     "color": 15715583,
+     "avatar": "https://cdn.discordapp.com/avatars/1273316013496074414/6a1c969e933ab75c11b16ccda8879364.png?size=128"
     }
    ]
   },
