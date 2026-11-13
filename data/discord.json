@@ -1,8 +1,8 @@
 {
- "updated": 1794579127,
+ "updated": 1794582233,
  "name": "Sephora E-Sports",
- "members": 243,
- "online": 65,
+ "members": 247,
+ "online": 76,
  "boosts": 20,
  "tier": 3,
  "invite": "https://discord.gg/A4JvxzRy6d",
@@ -124,13 +124,6 @@
      "role_icon": "https://cdn.discordapp.com/role-icons/1528401313845743787/2d2fda531578e36486d82e4624783030.png?size=64",
      "color": 15715583,
      "avatar": "https://cdn.discordapp.com/avatars/706235782612123778/3e45e96e51cd03a262d3f8fc3746c500.png?size=128"
-    },
-    {
-     "name": "akantsu",
-     "role": "Main Team",
-     "role_icon": "https://cdn.discordapp.com/role-icons/1528401313845743787/2d2fda531578e36486d82e4624783030.png?size=64",
-     "color": 15715583,
-     "avatar": "https://cdn.discordapp.com/avatars/1273782014335520842/484a8dc67b4238aac83d615ec2a29bf7.png?size=128"
     },
     {
      "name": "Plusi",
