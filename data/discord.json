@@ -1,5 +1,5 @@
 {
- "updated": 1795027071,
+ "updated": 1795030159,
  "name": "Sephora E-Sports",
  "members": 260,
  "online": 96,
@@ -72,18 +72,11 @@
    "title": "Coaches & Creator",
    "members": [
     {
-     "name": "schmarsch",
+     "name": "Plusi",
      "role": "Coach",
      "role_icon": "https://cdn.discordapp.com/role-icons/1525957538476982392/273ff2ba83ca24f8a7aa87515cc504cb.png?size=64",
      "color": 6808282,
-     "avatar": "https://cdn.discordapp.com/avatars/870685508706140240/62d6474046e2fe7a2b93b02ee36ed368.png?size=128"
-    },
-    {
-     "name": "VRN | Cookie Dough",
-     "role": "Coach",
-     "role_icon": "https://cdn.discordapp.com/role-icons/1525957538476982392/273ff2ba83ca24f8a7aa87515cc504cb.png?size=64",
-     "color": 6808282,
-     "avatar": "https://cdn.discordapp.com/avatars/1317495371605344279/92b549f7bc5659057c1ad74bd63e17f0.png?size=128"
+     "avatar": "https://cdn.discordapp.com/avatars/1273316013496074414/6a1c969e933ab75c11b16ccda8879364.png?size=128"
     },
     {
      "name": "Aziz",
@@ -91,13 +84,6 @@
      "role_icon": "https://cdn.discordapp.com/role-icons/1520029279453184051/a70211e691728fab6fc8feac5b425929.png?size=64",
      "color": 16750010,
      "avatar": "https://cdn.discordapp.com/avatars/1164208053709709424/6f4219cd6c22292d6b92592446389fc8.png?size=128"
-    },
-    {
-     "name": "Plusi",
-     "role": "Content Creator",
-     "role_icon": "https://cdn.discordapp.com/role-icons/1520029279453184051/a70211e691728fab6fc8feac5b425929.png?size=64",
-     "color": 16750010,
-     "avatar": "https://cdn.discordapp.com/avatars/1273316013496074414/6a1c969e933ab75c11b16ccda8879364.png?size=128"
     },
     {
      "name": "panda\\fs",
