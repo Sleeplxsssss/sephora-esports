@@ -1,8 +1,8 @@
 {
- "updated": 1795110340,
+ "updated": 1795113426,
  "name": "Sephora E-Sports",
  "members": 260,
- "online": 91,
+ "online": 90,
  "boosts": 20,
  "tier": 3,
  "invite": "https://discord.gg/A4JvxzRy6d",
@@ -16,13 +16,6 @@
      "role_icon": "https://cdn.discordapp.com/role-icons/1519752289735282728/326ef626f1035ef73f550df76f1662c5.png?size=64",
      "color": 16699986,
      "avatar": "https://cdn.discordapp.com/avatars/1464456727725342887/399445ae989700a56a9a4c6f67d3f507.png?size=128"
-    },
-    {
-     "name": "Rl Bruch GER",
-     "role": "Owner",
-     "role_icon": "https://cdn.discordapp.com/role-icons/1519752289735282728/326ef626f1035ef73f550df76f1662c5.png?size=64",
-     "color": 16699986,
-     "avatar": "https://cdn.discordapp.com/avatars/1251407360572915743/cce51d399d500380822f3418ed5df8be.png?size=128"
     },
     {
      "name": "qeexy_rl",
@@ -53,7 +46,7 @@
      "avatar": "https://cdn.discordapp.com/avatars/1286770039093198870/ab162357d00ffeac908de47a0eb4247c.png?size=128"
     },
     {
-     "name": "Strupor",
+     "name": "Stüropor",
      "role": "Moderation",
      "role_icon": "https://cdn.discordapp.com/role-icons/1520029362420715520/a55d504fddad29e7829c307d8750c68d.png?size=64",
      "color": 6341375,
@@ -114,13 +107,6 @@
      "role_icon": "https://cdn.discordapp.com/role-icons/1528401366245052537/7587738e61dcc170f0b2b3e3cc377ff7.png?size=64",
      "color": 13807359,
      "avatar": "https://cdn.discordapp.com/avatars/1464456727725342887/399445ae989700a56a9a4c6f67d3f507.png?size=128"
-    },
-    {
-     "name": "Rl Bruch GER",
-     "role": "Second Team",
-     "role_icon": "https://cdn.discordapp.com/role-icons/1528401366245052537/7587738e61dcc170f0b2b3e3cc377ff7.png?size=64",
-     "color": 13807359,
-     "avatar": "https://cdn.discordapp.com/avatars/1251407360572915743/cce51d399d500380822f3418ed5df8be.png?size=128"
     }
    ]
   },
