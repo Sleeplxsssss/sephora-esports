@@ -1,8 +1,8 @@
 {
- "updated": 1795125821,
+ "updated": 1795128927,
  "name": "Sephora E-Sports",
  "members": 260,
- "online": 64,
+ "online": 47,
  "boosts": 20,
  "tier": 3,
  "invite": "https://discord.gg/A4JvxzRy6d",
@@ -100,15 +100,7 @@
   },
   {
    "title": "Second Team",
-   "members": [
-    {
-     "name": "Lasse | GER",
-     "role": "Second Team",
-     "role_icon": "https://cdn.discordapp.com/role-icons/1528401366245052537/7587738e61dcc170f0b2b3e3cc377ff7.png?size=64",
-     "color": 13807359,
-     "avatar": "https://cdn.discordapp.com/avatars/1464456727725342887/399445ae989700a56a9a4c6f67d3f507.png?size=128"
-    }
-   ]
+   "members": []
   },
   {
    "title": "Academy",
