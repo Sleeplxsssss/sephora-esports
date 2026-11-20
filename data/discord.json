@@ -1,8 +1,8 @@
 {
- "updated": 1795209152,
+ "updated": 1795212227,
  "name": "Sephora E-Sports",
  "members": 259,
- "online": 98,
+ "online": 90,
  "boosts": 20,
  "tier": 3,
  "invite": "https://discord.gg/A4JvxzRy6d",
@@ -58,6 +58,13 @@
      "role_icon": "https://cdn.discordapp.com/role-icons/1520029362420715520/a55d504fddad29e7829c307d8750c68d.png?size=64",
      "color": 6341375,
      "avatar": "https://cdn.discordapp.com/avatars/1041481761047183372/934941775711bff99030fa62aead73fa.png?size=128"
+    },
+    {
+     "name": "krs taylan",
+     "role": "Moderation",
+     "role_icon": "https://cdn.discordapp.com/role-icons/1520029362420715520/a55d504fddad29e7829c307d8750c68d.png?size=64",
+     "color": 6341375,
+     "avatar": "https://cdn.discordapp.com/avatars/1247925835160096769/3834aed06ebd65d5d6ce314921c27bc5.png?size=128"
     }
    ]
   },
