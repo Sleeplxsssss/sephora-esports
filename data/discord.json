@@ -1,8 +1,8 @@
 {
- "updated": 1795295722,
+ "updated": 1795298821,
  "name": "Sephora E-Sports",
- "members": 260,
- "online": 101,
+ "members": 259,
+ "online": 94,
  "boosts": 20,
  "tier": 3,
  "invite": "https://discord.gg/A4JvxzRy6d",
@@ -58,6 +58,13 @@
      "role_icon": "https://cdn.discordapp.com/role-icons/1520029362420715520/a55d504fddad29e7829c307d8750c68d.png?size=64",
      "color": 6341375,
      "avatar": "https://cdn.discordapp.com/avatars/1197888011459903568/3aee56aa63c5ef819c291465d72f9bef.png?size=128"
+    },
+    {
+     "name": "Cally",
+     "role": "Moderation",
+     "role_icon": "https://cdn.discordapp.com/role-icons/1520029362420715520/a55d504fddad29e7829c307d8750c68d.png?size=64",
+     "color": 6341375,
+     "avatar": "https://cdn.discordapp.com/avatars/1119887236863901776/232421b68d709cefe7204e64211a007d.png?size=128"
     },
     {
      "name": "Dreamy (－ω－) Zest.",
