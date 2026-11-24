@@ -1,8 +1,8 @@
 {
- "updated": 1795553010,
+ "updated": 1795556094,
  "name": "Sephora E-Sports",
  "members": 270,
- "online": 91,
+ "online": 65,
  "boosts": 20,
  "tier": 3,
  "invite": "https://discord.gg/A4JvxzRy6d",
@@ -117,7 +117,29 @@
   },
   {
    "title": "Main Team",
-   "members": []
+   "members": [
+    {
+     "name": "Cally",
+     "role": "Main Team",
+     "role_icon": "https://cdn.discordapp.com/role-icons/1528401313845743787/2d2fda531578e36486d82e4624783030.png?size=64",
+     "color": 15715583,
+     "avatar": "https://cdn.discordapp.com/avatars/1119887236863901776/232421b68d709cefe7204e64211a007d.png?size=128"
+    },
+    {
+     "name": "krs taylan",
+     "role": "Main Team",
+     "role_icon": "https://cdn.discordapp.com/role-icons/1528401313845743787/2d2fda531578e36486d82e4624783030.png?size=64",
+     "color": 15715583,
+     "avatar": "https://cdn.discordapp.com/avatars/1247925835160096769/3834aed06ebd65d5d6ce314921c27bc5.png?size=128"
+    },
+    {
+     "name": "carinoo",
+     "role": "Main Team",
+     "role_icon": "https://cdn.discordapp.com/role-icons/1528401313845743787/2d2fda531578e36486d82e4624783030.png?size=64",
+     "color": 15715583,
+     "avatar": "https://cdn.discordapp.com/avatars/1469006296958242830/4b4ad6d8931a0207c53b689dedfc140a.png?size=128"
+    }
+   ]
   },
   {
    "title": "Second Team",
