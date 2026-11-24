@@ -1,8 +1,8 @@
 {
- "updated": 1795528176,
+ "updated": 1795531282,
  "name": "Sephora E-Sports",
  "members": 267,
- "online": 54,
+ "online": 67,
  "boosts": 20,
  "tier": 3,
  "invite": "https://discord.gg/A4JvxzRy6d",
@@ -142,6 +142,13 @@
      "role_icon": "https://cdn.discordapp.com/role-icons/1528401366245052537/7587738e61dcc170f0b2b3e3cc377ff7.png?size=64",
      "color": 13807359,
      "avatar": "https://cdn.discordapp.com/avatars/758045621738274866/a_dfa1d1b3eb25b4d80941ddfd309e0362.gif?size=128"
+    },
+    {
+     "name": "akantsu",
+     "role": "Second Team",
+     "role_icon": "https://cdn.discordapp.com/role-icons/1528401366245052537/7587738e61dcc170f0b2b3e3cc377ff7.png?size=64",
+     "color": 13807359,
+     "avatar": "https://cdn.discordapp.com/avatars/1273782014335520842/d18297e3cb0df041e7f298ec9fd9ab32.png?size=128"
     },
     {
      "name": "Rl Bruch GER",
