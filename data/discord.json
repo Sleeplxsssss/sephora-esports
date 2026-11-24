@@ -1,8 +1,8 @@
 {
- "updated": 1795546757,
+ "updated": 1795549850,
  "name": "Sephora E-Sports",
  "members": 268,
- "online": 89,
+ "online": 88,
  "boosts": 20,
  "tier": 3,
  "invite": "https://discord.gg/A4JvxzRy6d",
@@ -134,7 +134,7 @@
      "role": "Second Team",
      "role_icon": "https://cdn.discordapp.com/role-icons/1528401366245052537/7587738e61dcc170f0b2b3e3cc377ff7.png?size=64",
      "color": 13807359,
-     "avatar": "https://cdn.discordapp.com/avatars/1349774016705204224/e191dd0feecdb762f0bdb60508653ea8.png?size=128"
+     "avatar": "https://cdn.discordapp.com/avatars/1349774016705204224/b7ef03b793a63e4f7e23a22bfefc0dd3.png?size=128"
     },
     {
      "name": "Blizz",
@@ -172,6 +172,6 @@
  "tiktok": {
   "username": "sephoraesport",
   "latest": "7711428566361165078",
-  "title": "Sephora Esports x BLOW by KESHA 🌸"
+  "title": null
  }
 }
