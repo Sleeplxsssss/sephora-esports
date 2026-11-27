@@ -1,8 +1,8 @@
 {
- "updated": 1795800005,
+ "updated": 1795803102,
  "name": "Sephora E-Sports",
- "members": 277,
- "online": 98,
+ "members": 278,
+ "online": 103,
  "boosts": 20,
  "tier": 3,
  "invite": "https://discord.gg/A4JvxzRy6d",
@@ -25,6 +25,20 @@
      "avatar": "https://cdn.discordapp.com/avatars/1417597509156475051/1bf5e7dd8ea7632b2f21f27940a60eb5.png?size=128"
     },
     {
+     "name": "Manuᖭ༏ᖫ",
+     "role": "Owner",
+     "role_icon": "https://cdn.discordapp.com/role-icons/1519752289735282728/326ef626f1035ef73f550df76f1662c5.png?size=64",
+     "color": 16699986,
+     "avatar": "https://cdn.discordapp.com/avatars/1173037732386312323/b5df30c352a6891b608eca9c7131ac4d.png?size=128"
+    },
+    {
+     "name": "nils.l",
+     "role": "Owner",
+     "role_icon": "https://cdn.discordapp.com/role-icons/1519752289735282728/326ef626f1035ef73f550df76f1662c5.png?size=64",
+     "color": 16699986,
+     "avatar": "https://cdn.discordapp.com/avatars/1085803099077222421/a00e1734b82bf4677957ac64df546bb4.png?size=128"
+    },
+    {
      "name": "Sleepy  𓆩✧𓆪",
      "role": "Admin",
      "role_icon": "https://cdn.discordapp.com/role-icons/1526933858849914904/0e39793026a4fe7dc475b0402ccef58b.png?size=64",
@@ -37,6 +51,13 @@
      "role_icon": "https://cdn.discordapp.com/role-icons/1526933858849914904/0e39793026a4fe7dc475b0402ccef58b.png?size=64",
      "color": 16740228,
      "avatar": "https://cdn.discordapp.com/avatars/1164208053709709424/6f4219cd6c22292d6b92592446389fc8.png?size=128"
+    },
+    {
+     "name": "BestBro",
+     "role": "Admin",
+     "role_icon": "https://cdn.discordapp.com/role-icons/1526933858849914904/0e39793026a4fe7dc475b0402ccef58b.png?size=64",
+     "color": 16740228,
+     "avatar": "https://cdn.discordapp.com/avatars/1560707294612693182/93d63829dc1e38ebe2473e1f8353b8c5.png?size=128"
     },
     {
      "name": "Nico | GER",
