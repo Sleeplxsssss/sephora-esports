@@ -1,7 +1,7 @@
 {
- "updated": 1795843265,
+ "updated": 1795846360,
  "name": "Sephora E-Sports",
- "members": 282,
+ "members": 281,
  "online": 24,
  "boosts": 20,
  "tier": 3,
@@ -58,13 +58,6 @@
      "role_icon": "https://cdn.discordapp.com/role-icons/1526933858849914904/0e39793026a4fe7dc475b0402ccef58b.png?size=64",
      "color": 16740228,
      "avatar": "https://cdn.discordapp.com/avatars/1560707294612693182/93d63829dc1e38ebe2473e1f8353b8c5.png?size=128"
-    },
-    {
-     "name": "Nico | GER",
-     "role": "Management",
-     "role_icon": "https://cdn.discordapp.com/role-icons/1520029385502101615/5a0fbf35956e1f0d2655496845878f5b.png?size=64",
-     "color": 14715635,
-     "avatar": "https://cdn.discordapp.com/avatars/1265454989309116491/00aeabe2f33189e71c3e08ec71640d83.png?size=128"
     },
     {
      "name": "Einmal2",
